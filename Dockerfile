@@ -2,6 +2,8 @@ FROM perl:5.40-slim
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
+        perl \
+        libthreads-perl \
         git \
     && rm -rf /var/lib/apt/lists/*
 
