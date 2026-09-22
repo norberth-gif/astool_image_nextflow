@@ -1,9 +1,7 @@
-FROM perl:5.40-slim
+FROM perl:5.40-threaded-bookworm
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-        perl \
-        libthreads-perl \
         git \
     && rm -rf /var/lib/apt/lists/*
 
